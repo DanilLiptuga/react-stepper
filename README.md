@@ -12,6 +12,8 @@ Added classes:
 |circleClass|CSS class for circles|null|string|
 |stepClass|CSS class for step wrapper|null|string|
 
+Delimeters position was moved one level on higher for more control in case of using Flexbox
+
 ## Installation
 ```
 npm install react-stepper-horizontal --save
