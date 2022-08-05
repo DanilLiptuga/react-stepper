@@ -1,5 +1,16 @@
 # react-stepper
-Well-designed stepper component for react
+React-stepper-horizontal with added classes for customizing and changing delimeters position
+
+# Changes
+
+Added classes:
+| name     | description    | default    | type     |
+|----------|----------------|--------------|--------|
+|delimiterClass|CSS class for delimeter between steps|null|string|
+|titleClass|CSS class for title under circles|null|string|
+|stepContentClass|CSS class for step content|null|string|
+|circleClass|CSS class for circles|null|string|
+|stepClass|CSS class for step wrapper|null|string|
 
 ## Installation
 ```
