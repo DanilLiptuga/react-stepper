@@ -110,18 +110,21 @@ export default class Step extends Component {
   }
 
   render() {
-    const { title, icon, index, active, completed, first, isLast, href, onClick } = this.props;
+    const { title, icon, index, active, completed, first, isLast, href, onClick, stepClass,
+      stepContentClass,
+      titleClass,
+      circleClass, } = this.props;
 
     const styles = this.getStyles();
     const circleStyle = Object.assign(
-      styles.circle,
-      completed ? styles.completedCircle : {},
-      active ? styles.activeCircle : {},
+        styles.circle,
+        completed ? styles.completedCircle : {},
+        active ? styles.activeCircle : {},
     );
     const titleStyle = Object.assign(
-      styles.title,
-      completed ? styles.completedTitle : {},
-      active ? styles.activeTitle : {},
+        styles.title,
+        completed ? styles.completedTitle : {},
+        active ? styles.activeTitle : {},
     );
     const leftStyle = Object.assign(styles.leftBar, (active || completed) ? styles.completedBar : {});
     const rightStyle = Object.assign(styles.rightBar, completed ? styles.completedBar : {});
@@ -129,22 +132,22 @@ export default class Step extends Component {
     const stepContent = icon ? <img src={icon} alt={index + 1} /> : index + 1;
 
     return (
-      <div style={ styles.step }>
-        <div style={ circleStyle }>
-        {active || completed ? (
-          <a href={href} onClick={onClick} style={ styles.index }>{ stepContent }</a>
-        ) : (
-          <span style={ styles.index }>{ stepContent }</span>
-        )}
+        <div style={ styles.step } className={stepClass}>
+          <div className={stepContentClass}>
+            <div onClick={onClick} style={ circleStyle } className={circleClass}>
+              {active || completed ? (
+                  <a href={href} onClick={onClick} style={ styles.index } className={circleClass}>{ stepContent }</a>
+              ) : (
+                  <span style={ styles.index } className={circleClass}>{ stepContent }</span>
+              )}
+            </div>
+            {active || completed ? (
+                <a href={href} onClick={onClick} style={ titleStyle } className={titleStyle}>{ title }</a>
+            ) : (
+                <div style={ titleStyle } className={titleStyle}>{ title }</div>
+            )}
+          </div>
         </div>
-        {active || completed ? (
-          <a href={href} onClick={onClick} style={ titleStyle }>{ title }</a>
-        ) : (
-          <div style={ titleStyle }>{ title }</div>
-        )}
-        { !first && <div style={ leftStyle }></div> }
-        { !isLast && <div style={ rightStyle }></div> }
-      </div>
     );
   }
 }

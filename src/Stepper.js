@@ -24,54 +24,66 @@ function Stepper({
   circleTop, titleTop, completeOpacity, activeOpacity, defaultOpacity,
   completeTitleOpacity, activeTitleOpacity, defaultTitleOpacity, barStyle,
   defaultBorderColor, completeBorderColor, activeBorderColor, defaultBorderStyle,
-  completeBorderStyle, activeBorderStyle, defaultBarColor, completeBarColor, lineMarginOffset, defaultBorderWidth
+  completeBorderStyle, activeBorderStyle, defaultBarColor, completeBarColor, lineMarginOffset, defaultBorderWidth,
+  delimiterClass,
+  stepClass,
+  titleClass,
+  circleClass,
+  stepContentClass
 }) {
   return (
     <div style={ styles.root }>
       <div style={ styles.stepper }>
         { steps.map((step, index) => (
-          <Step
-            key={index}
-            width={100 / steps.length}
-            title={step.title}
-            icon={step.icon}
-            href={step.href}
-            onClick={step.onClick}
-            active={!(disabledSteps || []).includes(index) && index === activeStep}
-            completed={!(disabledSteps || []).includes(index) && index < activeStep}
-            first={index === 0}
-            isLast={index === steps.length - 1}
-            index={index}
-            activeColor={activeColor}
-            completeColor={completeColor}
-            defaultColor={defaultColor}
-            circleFontColor={circleFontColor}
-            activeTitleColor={activeTitleColor}
-            completeTitleColor={completeTitleColor}
-            defaultTitleColor={defaultTitleColor}
-            size={size}
-            circleFontSize={circleFontSize}
-            titleFontSize={titleFontSize}
-            circleTop={circleTop}
-            titleTop={titleTop}
-            defaultOpacity={defaultOpacity}
-            completeOpacity={completeOpacity}
-            activeOpacity={activeOpacity}
-            defaultTitleOpacity={defaultTitleOpacity}
-            completeTitleOpacity={completeTitleOpacity}
-            activeTitleOpacity={activeTitleOpacity}
-            barStyle={barStyle}
-            defaultBorderColor={defaultBorderColor}
-            completeBorderColor={completeBorderColor}
-            activeBorderColor={activeBorderColor}
-            defaultBorderStyle={defaultBorderStyle}
-            defaultBorderWidth={defaultBorderWidth}
-            completeBorderStyle={completeBorderStyle}
-            activeBorderStyle={activeBorderStyle}
-            defaultBarColor={defaultBarColor}
-            completeBarColor={completeBarColor}
-            lineMarginOffset={lineMarginOffset}
-          />
+            <>
+              <Step
+                  key={index}
+                  width={100 / steps.length}
+                  title={step.title}
+                  icon={step.icon}
+                  href={step.href}
+                  onClick={step.onClick}
+                  active={!(disabledSteps || []).includes(index) && index === activeStep}
+                  completed={!(disabledSteps || []).includes(index) && index < activeStep}
+                  first={index === 0}
+                  isLast={index === steps.length - 1}
+                  index={index}
+                  stepClass={stepClass}
+                  titleClass={titleClass}
+                  circleClass={circleClass}
+                  stepContentClass={stepContentClass}
+                  activeColor={activeColor}
+                  completeColor={completeColor}
+                  defaultColor={defaultColor}
+                  circleFontColor={circleFontColor}
+                  activeTitleColor={activeTitleColor}
+                  completeTitleColor={completeTitleColor}
+                  defaultTitleColor={defaultTitleColor}
+                  size={size}
+                  circleFontSize={circleFontSize}
+                  titleFontSize={titleFontSize}
+                  circleTop={circleTop}
+                  titleTop={titleTop}
+                  defaultOpacity={defaultOpacity}
+                  completeOpacity={completeOpacity}
+                  activeOpacity={activeOpacity}
+                  defaultTitleOpacity={defaultTitleOpacity}
+                  completeTitleOpacity={completeTitleOpacity}
+                  activeTitleOpacity={activeTitleOpacity}
+                  barStyle={barStyle}
+                  defaultBorderColor={defaultBorderColor}
+                  completeBorderColor={completeBorderColor}
+                  activeBorderColor={activeBorderColor}
+                  defaultBorderStyle={defaultBorderStyle}
+                  defaultBorderWidth={defaultBorderWidth}
+                  completeBorderStyle={completeBorderStyle}
+                  activeBorderStyle={activeBorderStyle}
+                  defaultBarColor={defaultBarColor}
+                  completeBarColor={completeBarColor}
+                  lineMarginOffset={lineMarginOffset}
+              />
+              <div className={delimiterClass} style={{borderStyle: barStyle, borderColor: !(disabledSteps || []).includes(index) && index < activeStep ? completeBarColor : defaultBarColor}}/>
+            </>
         )) }
       </div>
     </div>
