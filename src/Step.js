@@ -142,9 +142,9 @@ export default class Step extends Component {
               )}
             </div>
             {active || completed ? (
-                <a href={href} onClick={onClick} style={ titleStyle } className={titleStyle}>{ title }</a>
+                <a href={href} onClick={onClick} style={ titleStyle } className={titleClass}>{ title }</a>
             ) : (
-                <div style={ titleStyle } className={titleStyle}>{ title }</div>
+                <div style={ titleStyle } className={titleClass}>{ title }</div>
             )}
           </div>
         </div>
