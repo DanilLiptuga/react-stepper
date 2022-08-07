@@ -1,6 +1,6 @@
 {
   "name": "react-stepper-horizontal",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "description": "Well-designed stepper component for react",
   "main": "lib/index.js",
   "scripts": {
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/mu29/react-stepper.git"
+    "url": "https://github.com/DanilLiptuga/react-stepper.git"
   },
   "keywords": [
     "facebook",
@@ -24,9 +24,9 @@
   "author": "InJung Chung <mu29@yeoubi.net>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mu29/react-stepper/issues"
+    "url": "https://github.com/DanilLiptuga/react-stepper/issues"
   },
-  "homepage": "https://github.com/mu29/react-stepper#readme",
+  "homepage": "https://github.com/DanilLiptuga/react-stepper#readme",
   "devDependencies": {
     "babel-cli": "^6.16.0",
     "babel-loader": "^6.2.5",
