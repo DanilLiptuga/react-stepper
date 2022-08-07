@@ -35,7 +35,7 @@ function Stepper({
     <div style={ styles.root }>
       <div style={ styles.stepper }>
         { steps.map((step, index) => (
-            <>
+            <React.Fragment>
               <Step
                   key={index}
                   width={100 / steps.length}
@@ -83,7 +83,7 @@ function Stepper({
                   lineMarginOffset={lineMarginOffset}
               />
               <div className={delimiterClass} style={{borderStyle: barStyle, borderColor: !(disabledSteps || []).includes(index) && index < activeStep ? completeBarColor : defaultBarColor}}/>
-            </>
+            </React.Fragment>
         )) }
       </div>
     </div>
