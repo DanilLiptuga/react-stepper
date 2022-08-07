@@ -82,7 +82,10 @@ function Stepper({
                   completeBarColor={completeBarColor}
                   lineMarginOffset={lineMarginOffset}
               />
-              <div className={delimiterClass} style={{borderStyle: barStyle, borderColor: !(disabledSteps || []).includes(index) && index < activeStep ? completeBarColor : defaultBarColor}}/>
+              {index !== steps.length - 1 && <div className={delimiterClass} style={{
+                borderStyle: barStyle,
+                borderColor: !(disabledSteps || []).includes(index) && index < activeStep ? completeBarColor : defaultBarColor
+              }}/>}
             </React.Fragment>
         )) }
       </div>
