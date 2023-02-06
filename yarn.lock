@@ -934,7 +934,7 @@
   dependencies:
     "is-extglob" "^1.0.0"
 
-"fbjs@^0.8.1", "fbjs@^0.8.4":
+"fbjs@^0.8.4":
   "integrity" "sha512-+EOKf9TND+jwE2YVURxsfVWU8DX+n8lvh/0giWSwS63GcFufkGS9t1Wurr8aYgdcLGdyI0fQdqlVeTBO63ExBQ=="
   "resolved" "https://registry.npmjs.org/fbjs/-/fbjs-0.8.9.tgz"
   "version" "0.8.9"
@@ -1542,16 +1542,7 @@
     "is-number" "^2.0.2"
     "kind-of" "^3.0.2"
 
-"react-dom@^15.3.2":
-  "integrity" "sha512-k5NZrskw9K6rTlgIH/z4exMQuQQfzF8z2G7Ic+9vODPTycx//qyuOTiAhYhjlOaHFsIH2IXWJ4n4JiwheDBXNA=="
-  "resolved" "https://registry.npmjs.org/react-dom/-/react-dom-15.4.2.tgz"
-  "version" "15.4.2"
-  dependencies:
-    "fbjs" "^0.8.1"
-    "loose-envify" "^1.1.0"
-    "object-assign" "^4.1.0"
-
-"react@^15.3.2", "react@^15.4.2":
+"react@^15.3.2":
   "integrity" "sha512-qfWUqdaiZjHlmsWI9Cvw9UvugnxluSsEoSOeykOiB37xQokYpxNqdQizNsAqVQvrNz4I8Pf7wCfB5g+ocvJS8Q=="
   "resolved" "https://registry.npmjs.org/react/-/react-15.4.2.tgz"
   "version" "15.4.2"
